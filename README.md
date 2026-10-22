@@ -1,93 +1,31 @@
-# 🤖 Robô de Sumô — TJR Paraíba
+# Robô de Sumô — TJR Paraíba
 
-Este repositório reúne a programação do nosso **robô de sumô autônomo**, desenvolvido para participar do **Torneio Juvenil de Robótica (TJR) da Paraíba**.
+Repositório da programação de um robô de sumô autônomo, desenvolvido com foco no Torneio Juvenil de Robótica (TJR) da Paraíba.
 
-A ideia do projeto é fazer com que o robô consiga lutar sozinho dentro da arena, identificando o adversário, atacando no momento certo e evitando sair da área de combate.
+O objetivo é localizar o adversário e evitar sair da arena. O código documenta essa proposta; este repositório não apresenta resultados de testes físicos ou comprovação de participação na competição.
 
----
-
-## 📸 Nosso robô
-
-<!-- Coloque aqui uma foto principal do robô -->
+## Registro do robô
 
 <p align="center">
-  <img src="Imagens/IMG-20260823-WA0056.jpg" width="500" height="500">
+  <img src="Imagens/IMG-20260823-WA0056.jpg" width="500" alt="Registro fotográfico do robô de sumô do projeto">
 </p>
 
----
+## Código e configuração descrita
 
-## Sobre o projeto
+O sketch principal está em [Código_Robô_Sumô.ino](Código_Robô_Sumô.ino).
 
-No sumô de robôs, não basta apenas ter força. O robô também precisa saber onde está o adversário e reagir rápido ao que acontece durante a luta.
+O cabeçalho e as constantes do arquivo descrevem:
 
-Por isso, estamos desenvolvendo uma programação que permite ao robô tomar suas próprias decisões a partir dos sensores instalados nele.
+- Arduino Mega 2560;
+- dois sensores ultrassônicos HC-SR04, na frente e atrás;
+- três sensores de cor/refletância, na frente esquerda, frente direita e atrás;
+- dois drivers BTS7960, um para cada motor;
+- arena branca com borda preta.
 
-Durante uma partida, ele pode:
+A prioridade descrita no sketch é detectar e escapar da borda, atacar o adversário à frente, virar quando ele estiver atrás e procurar quando não houver detecção. A configuração no código não comprova a montagem, a calibração dos sensores ou o comportamento em arena.
 
-* procurar o adversário;
-* avançar quando identifica o oponente;
-* perceber quando existe um adversário atrás;
-* identificar a borda da arena;
-* recuar e corrigir sua trajetória antes de sair da área de combate.
+## Estado do projeto
 
-A prioridade é sempre permanecer dentro da arena. Depois disso, o robô decide a melhor forma de procurar e atacar o adversário.
+O projeto está parado e sua continuidade está indefinida. O sketch foi preservado como registro do trabalho existente, sem novas funcionalidades nesta organização documental.
 
----
-
-## 🛠️ Construção
-
-<!-- Coloque aqui fotos da montagem, estrutura ou eletrônica -->
-
-Aqui podem ser registradas algumas etapas da construção e dos testes realizados no robô.
-
----
-
-## 🧠 Como ele funciona
-
-O robô utiliza sensores para observar o que está acontecendo ao seu redor.
-
-Os sensores de distância ajudam a encontrar o outro robô, enquanto os sensores voltados para o chão ajudam a perceber quando ele está chegando perto da borda.
-
-A partir dessas informações, a programação decide se é melhor **avançar, recuar, girar ou continuar procurando**.
-
-Tudo isso acontece automaticamente durante a partida.
-
----
-
-## 📷 Sensores e componentes
-
-<!-- Coloque aqui uma foto mostrando sensores, motores ou parte interna -->
----
-
-## 💻 Código
-
-O código principal do projeto está no arquivo:
-
-`Sumo.cpp`
-
-Nele está a lógica utilizada para controlar os sensores, os motores e as decisões tomadas pelo robô durante uma luta.
-
----
-
-## 🏆 TJR Paraíba
-
-O projeto está sendo desenvolvido com foco na participação no **Torneio Juvenil de Robótica — TJR Paraíba**, na modalidade de **Sumô**.
-
-Além da competição, o desenvolvimento do robô também é uma forma de colocar em prática conhecimentos de programação, eletrônica e robótica.
-
----
-
-## 🥋 Testes na arena
-
-<!-- Coloque aqui fotos ou GIFs do robô em funcionamento -->
-
-
-Essa parte pode ser atualizada conforme novos testes e competições forem realizados.
-
----
-
-## 🚧 Status do projeto
-
-**Em desenvolvimento e fase de testes.**
-
-O código continuará sendo atualizado conforme novos testes forem realizados e forem encontradas formas de melhorar o desempenho do robô.
+Não há instruções verificadas de montagem e compilação nem registros de ensaios que permitam afirmar desempenho físico. Uma eventual retomada depende de conferir o hardware, as ligações, o ambiente de compilação e os testes reais.
